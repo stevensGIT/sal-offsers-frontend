@@ -1,14 +1,8 @@
 import { DrinkCard } from "../DrinkCard";
 
-type Drink = {
-  id: number;
-  title: string;
-  abv: string;
-  logo: string;
-  notes: string;
-};
+import { DrinkType } from "../types";
 
-export default function DrinkList({ drinks }: { drinks: Drink[] }) {
+export default function DrinkList({ drinks }: { drinks: DrinkType[] }) {
   return (
     <>
       {drinks.map((drink) => (
