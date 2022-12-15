@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Heading, Box } from "@chakra-ui/react";
 
 import { DrinkList } from "../../components/DrinkList";
 
@@ -28,10 +28,15 @@ export default function Screen() {
   });
 
   return (
-    <SimpleGrid columns={2} spacing="40px" p="40px" minChildWidth="500px">
-      {data?.map((drink) => (
-        <DrinkList key={drink.name} name={drink.name} drinks={drink.drinks} />
-      ))}
-    </SimpleGrid>
+    <Box p="40px">
+      <Heading size="4xl" textAlign="center" mb="40px" color="white">
+        Drink offers! 🍻
+      </Heading>
+      <SimpleGrid columns={2} spacing="40px" minChildWidth="500px">
+        {data?.map((drink) => (
+          <DrinkList key={drink.name} name={drink.name} drinks={drink.drinks} />
+        ))}
+      </SimpleGrid>
+    </Box>
   );
 }
