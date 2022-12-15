@@ -1,4 +1,4 @@
-export type Drink = {
+export type DrinkType = {
   id: number;
   title: string;
   abv: string;
