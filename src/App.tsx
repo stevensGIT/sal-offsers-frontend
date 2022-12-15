@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
 
 import { DrinkList } from "./components/DrinkList";
 
@@ -9,7 +9,10 @@ function App() {
 
   return (
     <ChakraProvider>
-      <DrinkList drinks={drinks} />
+      <SimpleGrid columns={2} spacing="40px" p="40px" minChildWidth="500px">
+        <DrinkList drinks={drinks} />
+        <DrinkList drinks={drinks} />
+      </SimpleGrid>
     </ChakraProvider>
   );
 }
