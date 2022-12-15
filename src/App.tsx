@@ -1,19 +1,18 @@
-import { ChakraProvider, SimpleGrid } from "@chakra-ui/react";
+import { QueryClientProvider, QueryClient } from "react-query";
 
-import { DrinkList } from "./components/DrinkList";
+import { ChakraProvider } from "@chakra-ui/react";
 
-import { drinksList } from "./drinks";
+import { Screen } from "./screen/Screen";
 
 function App() {
-  const { drinks } = drinksList;
+  const client = new QueryClient();
 
   return (
-    <ChakraProvider>
-      <SimpleGrid columns={2} spacing="40px" p="40px" minChildWidth="500px">
-        <DrinkList drinks={drinks} />
-        <DrinkList drinks={drinks} />
-      </SimpleGrid>
-    </ChakraProvider>
+    <QueryClientProvider client={client}>
+      <ChakraProvider>
+        <Screen />
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 }
 

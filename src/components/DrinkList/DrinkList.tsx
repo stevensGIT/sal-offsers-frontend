@@ -6,7 +6,7 @@ export default function DrinkList({ drinks }: { drinks: DrinkType[] }) {
   return (
     <>
       {drinks.map((drink) => (
-        <DrinkCard {...drink} />
+        <DrinkCard key={drink.title} {...drink} />
       ))}
     </>
   );
