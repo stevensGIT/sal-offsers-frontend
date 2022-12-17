@@ -1,6 +1,7 @@
 import { QueryClientProvider, QueryClient } from "react-query";
 
 import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "./theme";
 
 import { Screen } from "./screen/Screen";
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <QueryClientProvider client={client}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Screen />
       </ChakraProvider>
     </QueryClientProvider>
