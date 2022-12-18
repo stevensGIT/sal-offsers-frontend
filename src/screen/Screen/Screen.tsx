@@ -1,4 +1,4 @@
-import { SimpleGrid, Heading, Box } from "@chakra-ui/react";
+import { SimpleGrid, Heading, Box, Image } from "@chakra-ui/react";
 
 import { DrinkList } from "../../components/DrinkList";
 

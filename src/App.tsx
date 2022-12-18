@@ -5,6 +5,8 @@ import { theme } from "./theme";
 
 import { Screen } from "./screen/Screen";
 
+import "./App.css";
+
 function App() {
   const client = new QueryClient();
 

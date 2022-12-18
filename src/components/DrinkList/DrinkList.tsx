@@ -13,7 +13,7 @@ export default function DrinkList({
 }) {
   return (
     <Flex direction="column">
-      <Heading color="white" mb="30px">
+      <Heading color="white" mb="30px" size="3xl">
         {name}
       </Heading>
       <VStack w="100%" align="flex-start" spacing="30px">
