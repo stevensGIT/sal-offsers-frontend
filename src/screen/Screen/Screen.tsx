@@ -1,4 +1,4 @@
-import { SimpleGrid, Heading, Box, Image } from "@chakra-ui/react";
+import { SimpleGrid, Heading, Box, Image, Flex, Text } from "@chakra-ui/react";
 
 import { DrinkList } from "../../components/DrinkList";
 
@@ -10,6 +10,7 @@ import Ale from "../../assets/brown-ale.png";
 import Beer from "../../assets/glass.png";
 import Stout from "../../assets/stout.png";
 import PaleAle from "../../assets/pale-ale.png";
+import Tap from "../../assets/beer-tap.png";
 
 const ENDPOINT = "https://4151-51-148-179-254.eu.ngrok.io/api/drinks";
 
@@ -91,9 +92,12 @@ export default function Screen() {
 
   return (
     <Box p="40px">
-      <Heading size="4xl" textAlign="center" mb="40px" color="white">
-        ON TAP 🤤
-      </Heading>
+      <Flex justify="center" align="center" direction="column">
+        <Image src={Tap} width="150px" />
+        <Heading size="4xl" mb="40px" color="white">
+          ON TAP
+        </Heading>
+      </Flex>
       <SimpleGrid columns={2} spacing="40px" minChildWidth="500px">
         {data?.map((drink) => (
           <DrinkList key={drink.name} name={drink.name} drinks={drink.drinks} />
