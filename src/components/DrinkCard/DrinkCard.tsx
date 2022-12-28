@@ -2,6 +2,9 @@ import { HStack, Image, Heading, Flex, SimpleGrid } from "@chakra-ui/react";
 
 import { DrinkType } from "./../types";
 
+// @ts-ignore
+import { ShakeSlow } from "reshake";
+
 export default function DrinkCard({
   title,
   notes,
@@ -27,7 +30,16 @@ export default function DrinkCard({
         </Flex>
       </SimpleGrid>
       <Flex position="absolute" w="20%" right="-7%" transform="rotate(20deg)">
-        <Image src={vector} />
+        <ShakeSlow
+          h={0}
+          int={35}
+          max={100}
+          fixed={true}
+          fixedStop={true}
+          freeze={false}
+        >
+          <Image src={vector} />
+        </ShakeSlow>
       </Flex>
     </HStack>
   );

@@ -94,7 +94,7 @@ export default function Screen() {
     <>
       <Box p="40px">
         <Flex justify="center" align="center" direction="column" mb="40px">
-          <Heading size="4xl" color="white">
+          <Heading color="white" fontSize="6rem">
             ON TAP
           </Heading>
           <Image src={Tap} width="150px" />
