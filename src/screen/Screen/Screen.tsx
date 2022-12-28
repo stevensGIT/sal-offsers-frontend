@@ -1,4 +1,4 @@
-import { SimpleGrid, Heading, Box, Image, Flex, Text } from "@chakra-ui/react";
+import { SimpleGrid, Heading, Box, Image, Flex } from "@chakra-ui/react";
 
 import { DrinkList } from "../../components/DrinkList";
 
@@ -91,18 +91,41 @@ export default function Screen() {
   ];
 
   return (
-    <Box p="40px">
-      <Flex justify="center" align="center" direction="column">
-        <Image src={Tap} width="150px" />
-        <Heading size="4xl" mb="40px" color="white">
-          ON TAP
+    <>
+      <Box p="40px">
+        <Flex justify="center" align="center" direction="column" mb="40px">
+          <Heading size="4xl" color="white">
+            ON TAP
+          </Heading>
+          <Image src={Tap} width="150px" />
+        </Flex>
+        <SimpleGrid columns={2} spacing="40px" minChildWidth="500px">
+          {data?.map((drink) => (
+            <DrinkList
+              key={drink.name}
+              name={drink.name}
+              drinks={drink.drinks}
+            />
+          ))}
+        </SimpleGrid>
+      </Box>
+      <Flex
+        color="white"
+        position="fixed"
+        bottom="0"
+        justify="center"
+        bg="black"
+        w="100%"
+      >
+        <Heading size="md">
+          <a
+            href="https://www.flaticon.com/free-icons/drink"
+            title="drink icons"
+          >
+            Drink icons created by Flat Icons - Flaticon
+          </a>
         </Heading>
       </Flex>
-      <SimpleGrid columns={2} spacing="40px" minChildWidth="500px">
-        {data?.map((drink) => (
-          <DrinkList key={drink.name} name={drink.name} drinks={drink.drinks} />
-        ))}
-      </SimpleGrid>
-    </Box>
+    </>
   );
 }

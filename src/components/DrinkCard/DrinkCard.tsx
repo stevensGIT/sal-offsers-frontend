@@ -1,10 +1,4 @@
-import {
-  HStack,
-  Image,
-  Heading,
-  Flex,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { HStack, Image, Heading, Flex, SimpleGrid } from "@chakra-ui/react";
 
 import { DrinkType } from "./../types";
 
@@ -32,13 +26,7 @@ export default function DrinkCard({
           </Heading>
         </Flex>
       </SimpleGrid>
-      <Flex
-        position="absolute"
-        w="20%"
-        top="-40%"
-        right="-7%"
-        transform="rotate(20deg)"
-      >
+      <Flex position="absolute" w="20%" right="-7%" transform="rotate(20deg)">
         <Image src={vector} />
       </Flex>
     </HStack>
