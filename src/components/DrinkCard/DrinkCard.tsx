@@ -13,7 +13,7 @@ export default function DrinkCard({
   vector,
 }: DrinkType) {
   return (
-    <HStack p="10px" position="relative" className="chalk-border">
+    <HStack p="10px" position="relative" border="10px solid white" borderRadius="20px">
       <Image
         style={{ width: "10%" }}
         src="https://cdn.shopify.com/s/files/1/0265/9441/0576/products/image001_41a231c9-bb13-4a1e-ac2d-cf1ee4701fdd.png?v=1647357508"

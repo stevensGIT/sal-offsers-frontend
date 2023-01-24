@@ -2,7 +2,7 @@ import { SimpleGrid, Heading, Box, Image, Flex } from "@chakra-ui/react";
 
 import { DrinkList } from "../../components/DrinkList";
 
-import { useQuery } from "react-query";
+// import { useQuery } from "react-query";
 
 import Bottle from "../../assets/beer.png";
 import Bitter from "../../assets/bitter.png";
@@ -12,7 +12,7 @@ import Stout from "../../assets/stout.png";
 import PaleAle from "../../assets/pale-ale.png";
 import Tap from "../../assets/beer-tap.png";
 
-const ENDPOINT = "https://4151-51-148-179-254.eu.ngrok.io/api/drinks";
+// const ENDPOINT = "https://4151-51-148-179-254.eu.ngrok.io/api/drinks";
 
 export default function Screen() {
   // const { data } = useQuery(["drinks"], async () => {
